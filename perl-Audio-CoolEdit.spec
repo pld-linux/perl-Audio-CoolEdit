@@ -1,6 +1,7 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Audio
 %define		pnam	CoolEdit
@@ -15,7 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	76747b7256b59eed9454c2ba6838ef84
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-Audio-Tools
-%{!?_without_tests:BuildRequires:	perl-Audio-Wav}
+%{?with_tests:BuildRequires:	perl-Audio-Wav}
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -46,7 +47,7 @@ tworzony z my¶l± o u¿ywaniu ³±cznie z Audio::Mix.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
