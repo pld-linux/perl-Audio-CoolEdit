@@ -41,7 +41,7 @@ tworzony z my¶l± o u¿ywaniu ³±cznie z Audio::Mix.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %{!?_without_tests:%{__make} test}
