@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Audio
-%define		pnam	CoolEdit
+%define	pdir	Audio
+%define	pnam	CoolEdit
 Summary:	Audio::CoolEdit Perl module - reading/writing Syntrillium CoolEdit Pro .ses files
 Summary(pl):	Modu³ Perla Audio::CoolEdit - odczyt/zapis plików .ses programu CoolEdit Pro
 Name:		perl-Audio-CoolEdit
