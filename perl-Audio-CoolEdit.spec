@@ -14,7 +14,7 @@ License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	76747b7256b59eed9454c2ba6838ef84
-BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Audio-Tools
 %{?with_tests:BuildRequires:	perl-Audio-Wav}
 BuildRequires:	rpm-perlprov >= 4.1-13
