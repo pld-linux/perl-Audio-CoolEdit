@@ -17,6 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Audio-Tools
 %if %{with autodeps} || %{with tests}
+BuildRequires:	perl(Audio::Tools::ByteOrder)
 BuildRequires:	perl-Audio-Tools
 BuildRequires:	perl-Audio-Wav
 %endif
