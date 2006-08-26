@@ -9,14 +9,17 @@ Summary:	Audio::CoolEdit Perl module - reading/writing Syntrillium CoolEdit Pro 
 Summary(pl):	Modu³ Perla Audio::CoolEdit - odczyt/zapis plików .ses programu CoolEdit Pro
 Name:		perl-Audio-CoolEdit
 Version:	0.01
-Release:	4
+Release:	5
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	76747b7256b59eed9454c2ba6838ef84
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Audio-Tools
-%{?with_tests:BuildRequires:	perl-Audio-Wav}
+%if %{with autodeps} || %{with tests}
+BuildRequires:	perl-Audio-Tools
+BuildRequires:	perl-Audio-Wav
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
