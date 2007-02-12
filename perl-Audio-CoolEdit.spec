@@ -6,7 +6,7 @@
 %define		pdir	Audio
 %define		pnam	CoolEdit
 Summary:	Audio::CoolEdit Perl module - reading/writing Syntrillium CoolEdit Pro .ses files
-Summary(pl):	Modu³ Perla Audio::CoolEdit - odczyt/zapis plików .ses programu CoolEdit Pro
+Summary(pl.UTF-8):   ModuÅ‚ Perla Audio::CoolEdit - odczyt/zapis plikÃ³w .ses programu CoolEdit Pro
 Name:		perl-Audio-CoolEdit
 Version:	0.01
 Release:	6
@@ -35,13 +35,13 @@ virtual track at a given offset. The write module is a lot more
 developed than the read module as this has been developed to be used
 with Audio::Mix.
 
-%description -l pl
+%description -l pl.UTF-8
 Program CoolEdit Pro firmy Syntrillium (http://www.syntrillium.com/)
-jest wielo¶cie¿kowym edytorem d¼wiêku pod MS Windows. Ten modu³ Perla
-potrafi odczytywaæ i zapisywaæ pliki sesji tego programu (.ses),
-pozwalaj±c na umieszczanie wirtualnych ¶cie¿ek w podanym miejscu.
-Modu³ zapisuj±cy jest bardziej rozwiniêty od czytaj±cego, poniewa¿ by³
-tworzony z my¶l± o u¿ywaniu ³±cznie z Audio::Mix.
+jest wieloÅ›cieÅ¼kowym edytorem dÅºwiÄ™ku pod MS Windows. Ten moduÅ‚ Perla
+potrafi odczytywaÄ‡ i zapisywaÄ‡ pliki sesji tego programu (.ses),
+pozwalajÄ…c na umieszczanie wirtualnych Å›cieÅ¼ek w podanym miejscu.
+ModuÅ‚ zapisujÄ…cy jest bardziej rozwiniÄ™ty od czytajÄ…cego, poniewaÅ¼ byÅ‚
+tworzony z myÅ›lÄ… o uÅ¼ywaniu Å‚Ä…cznie z Audio::Mix.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
