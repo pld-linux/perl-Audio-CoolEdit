@@ -2,10 +2,10 @@
 # Conditional build:
 %bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests		# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Audio
 %define		pnam	CoolEdit
+%include	/usr/lib/rpm/macros.perl
 Summary:	Audio::CoolEdit Perl module - reading/writing Syntrillium CoolEdit Pro .ses files
 Summary(pl.UTF-8):	Moduł Perla Audio::CoolEdit - odczyt/zapis plików .ses programu CoolEdit Pro
 Name:		perl-Audio-CoolEdit
@@ -15,14 +15,15 @@ License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	76747b7256b59eed9454c2ba6838ef84
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/Audio-CoolEdit/
 BuildRequires:	perl-Audio-Tools
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with autodeps} || %{with tests}
 BuildRequires:	perl(Audio::Tools::ByteOrder)
 BuildRequires:	perl-Audio-Tools
 BuildRequires:	perl-Audio-Wav
 %endif
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
