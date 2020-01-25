@@ -5,7 +5,6 @@
 
 %define		pdir	Audio
 %define		pnam	CoolEdit
-%include	/usr/lib/rpm/macros.perl
 Summary:	Audio::CoolEdit Perl module - reading/writing Syntrillium CoolEdit Pro .ses files
 Summary(pl.UTF-8):	Moduł Perla Audio::CoolEdit - odczyt/zapis plików .ses programu CoolEdit Pro
 Name:		perl-Audio-CoolEdit
